@@ -1,0 +1,8 @@
+%Thresholding is a Pixel based Image Segmentation technique. 
+%graythresh(I) computes a global threshold T from grayscale image I, using Otsu's method. Otsu's method chooses a threshold that minimizes the intraclass variance of the thresholded black and white pixels. The global threshold T can be used with imbinarize to convert a grayscale image to a binary image.
+I = imread("3.jpg");
+I = rgb2gray(I);
+I = imadjust(I);
+level = graythresh(I)
+J = imbinarize(I,level);
+imshow(J); figure;
